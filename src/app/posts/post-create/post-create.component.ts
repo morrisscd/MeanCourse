@@ -9,7 +9,7 @@ import { PostsService } from '../posts.service';
 })
 export class PostCreateComponent {
   enteredContent = '';
-  enteredTitle = '' ;
+  enteredTitle = '';
 
   constructor(public postsService: PostsService) {}
 
@@ -17,6 +17,7 @@ export class PostCreateComponent {
     if (form.invalid) {
       return;
     }
+    console.log(this);
     this.postsService.addPost(form.value.title, form.value.content);
     form.resetForm();
   }

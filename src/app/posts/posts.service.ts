@@ -17,7 +17,6 @@ export class PostsService {
         this.posts =  postData.posts;
         this.postsUpdated.next([...this.posts]);
       });
-    
  }
 
  getPostUpdateListener() {
